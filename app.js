@@ -1,6 +1,23 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 let amigos = [];
 
+const establecerFocusEnInputNombre = function() {
+    document.getElementById("amigo").focus();
+}
+
+const eventoEnterAgregaAmigo = function() {
+    document.getElementById("amigo").addEventListener("keydown", function (event) {
+       if(event.key === "Enter") {
+            agregarAmigo();
+       } 
+    });
+}
+
+const init = function() {
+    establecerFocusEnInputNombre();
+    eventoEnterAgregaAmigo();
+}
+
 const asignarTextoElemento = function(selectorElemento, nuevoTexto) {
     let elemento = document.querySelector(selectorElemento);
     elemento.innerHTML = nuevoTexto;
@@ -48,6 +65,8 @@ const agregarAmigo = function() {
 
     }
 
+    establecerFocusEnInputNombre();
+
 }
 
 const cumpleRequisitosParaSorteo = function () {
@@ -88,3 +107,5 @@ const sortearAmigo = function() {
 const generarIndiceAleatorio = function() {
     return Math.floor(Math.random() * amigos.length);
 }
+
+init();
