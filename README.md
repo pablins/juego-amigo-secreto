@@ -16,7 +16,7 @@ Corresponde a una aplicación que permita a los usuarios ingresar nombres de ami
 ### Instalación
 ```bash
 git clone https://github.com/pablins/juego-amigo-secreto.git
-cd amigo-secreto
+cd juego-amigo-secreto
 # Abrir index.html en tu navegador
 ````
 
